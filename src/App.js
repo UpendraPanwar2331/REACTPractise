@@ -1,24 +1,28 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
 
+import { BrowserRouter,Route,Routes } from 'react-router-dom';
+
+import Prac from './Practise';
+import Prop from './Prop';
+import Counter from './counter/Counter';
+import Todo from './todo/Todo';
+import Routing from './Routing';
+
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  <>
+  <BrowserRouter>
+  <Routing/>
+  <Routes>
+   <Route path='/counter' element={<Counter/>}/>
+   <Route path='/todo' element={<Todo/>}/>
+   <Route path='/prop' element={<Prop/>}/>
+   <Route path='/prac' element={<Prac/>}/>
+  </Routes>
+  </BrowserRouter>
+  </>
   );
 }
 
