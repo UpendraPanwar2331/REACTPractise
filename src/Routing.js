@@ -8,6 +8,8 @@ const Routing = () => {
       <Link to="/todo">TODO &nbsp;</Link>
       <Link to="/prop">PROP &nbsp;</Link>
       <Link to="/prac">PRAC &nbsp;</Link>
+      <Link to="/stopwatch">STOPWatch &nbsp;</Link>
+      <Link to="/stopwatchTimer">STOPWatch-Timer &nbsp;</Link>
    
     </div>
   )
